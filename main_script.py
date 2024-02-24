@@ -100,7 +100,7 @@ def main_menu():
                 service_module = input('Digite o módulo do serviço (ex: http-form-post): ')
                 login_page = input('Digite a página de login (ex: /userinfo.php): ')
                 params1 = input('Digite o primeiro parâmetro (ex: username): ')
-                params2 = input('Digite o segundo parâmetro (ex: password): ')
+                params2 = input('Digite o segundo parâmetro (ex: passwords): ')
                 fail_condition = input('Digite a condição de falha (login page): ')
                 print('\n')
                 run_hydra(target_url, user_file_path, password_file_path, service_module, login_page, params1, params2, fail_condition)

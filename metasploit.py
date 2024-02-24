@@ -2,8 +2,8 @@ import time
 from pymetasploit3.msfrpc import MsfRpcClient
 
 def metasploit_scan(target_ip):
-    client = MsfRpcClient('s3nh4@123', ssl=True)  # 'password' é a senha do servidor msfrpcd do Metasploit
-    #client = MsfRpcClient('password', ssl=True)
+    client = MsfRpcClient('s3nh4@123', ssl=True)  # 'passwords' é a senha do servidor msfrpcd do Metasploit
+    #client = MsfRpcClient('passwords', ssl=True)
     scanner = client.modules.use('auxiliary', 'scanner/portscan/tcp')
     scanner['RHOSTS'] = target_ip
     scanner['THREADS'] = 10

@@ -20,7 +20,7 @@ def run_hydra(target_url, user_file_path, pass_file_path, service_module, login_
                 hydra_output = file.read()
 
             # Procura por combinações bem-sucedidas de usuário e senha
-            success_pattern = re.compile(r"login:\s*(.*?)\s*password:\s*(.*?)$")
+            success_pattern = re.compile(r"login:\s*(.*?)\s*passwords:\s*(.*?)$")
             matches = success_pattern.findall(hydra_output)
             if matches:
                 for username, password in matches:
